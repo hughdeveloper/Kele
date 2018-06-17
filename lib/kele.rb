@@ -45,7 +45,6 @@ class Kele
     response = self.class.get(api_url("messages"), { body: {sender: email, recipient_id: recipient_id, subject: subject}}, headers: { "authorization" => @auth_token })
   end
 
-
   private
   def api_url(endpoint)
     "https://www.bloc.io/api/v1/#{endpoint}"
