@@ -41,8 +41,8 @@ class Kele
     p @message
   end
 
-  def create_message(email, recipent_id, subject)
-    response = self.class.get(api_url("messages"), { body: {sender: email, recipient_id: recipient_id, subject: subject}}, headers: { "authorization" => @auth_token })
+  def create_message(email, recipent_id, subject, body)
+    response = self.class.get(api_url("messages"), { body: {sender: email, recipient_id: recipient_id, subject: subject, stripped-text: body}}, headers: { "authorization" => @auth_token })
   end
 
   private
